@@ -8,9 +8,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <EditText
+        android:id="@+id/main_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:ems="10" />
 
+    <Button
+        android:id="@+id/show_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_input"
+        android:layout_alignLeft="@+id/main_input"
+        android:onClick="onClick"
+        android:text="@string/show_message" />
+
+    <RadioGroup
+        android:id="@+id/orientation"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"
+  		android:layout_alignLeft="@+id/main_input"
+  		android:layout_below="@+id/show_message" >
+
+        <RadioButton 
+            android:id="@+id/horizontal"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Horizontal" />
+
+        <RadioButton 
+            android:id="@+id/vertical"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:checked="true"
+    		android:text="Vertical"/>
+    </RadioGroup>
 </RelativeLayout>
